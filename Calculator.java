@@ -72,7 +72,10 @@ public class Calculator {
             number1 = string[0].length() / number;
             result = string[0].substring(0,number1);
         }
-        print(result.substring(0, 40) + "(...)");
+        if (result.length() > 40)
+            print(result.substring(0, 40) + "(...)");
+        else
+            print(result);
     }
     public static void print(String text){
         System.out.println("\"" + text + "\"");
