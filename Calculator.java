@@ -22,7 +22,7 @@ public class Calculator {
             oper = '+';
         } else if (str.contains(" - ")){
             string = str.split(" - ");
-            if (string[0].contains("\"") || string[1].contains("\"")) {
+            if (string[0].contains("\"") && string[1].contains("\"")) {
                 string[0] = string[0].replace("\"", "");
                 string[1] = string[1].replace("\"", "");
             }else throw new Exception("Строка должна содержать кавычки");
